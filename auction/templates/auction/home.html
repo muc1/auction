@@ -1,0 +1,15 @@
+{% extends "auction/base.html" %} {% block content %}
+<h1>Auction Home!</h1>
+<div class="row">
+  {% for post in posts %}
+  <div class="col-md-4 mt-3">
+    <div class="card mx-4" style="width: 16rem;">
+      <img class="card-img-top" src="{{ post.image.url }}?text={{ post.title}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
